@@ -105,6 +105,14 @@ button:active {
     color: white;
     font-family: "Arimo", sans-serif;
     font-weight: bold;
+    text-align: left;
+    max-width: 155px;
+    width: 100%;
+}
+
+#div-msg {
+    margin-top: 1em;
+    color: #FFCDD2;
 }
 
 #loading {
@@ -247,4 +255,8 @@ button:active {
 
 #calculating {
     display: none;
+}
+
+.ht {
+    opacity: 0;
 }

@@ -4,7 +4,9 @@ var divination = [
     "Sacrificing a goat",
     "Consulting Mayan calenders",
     "Checking blood types",
-    "Tracing palm lines"
+    "Tracing palm lines",
+    "Shuffling Tarot cards",
+    "Gazing into crystal ball"
 ];
 
 function rndMsg() {
@@ -13,15 +15,15 @@ function rndMsg() {
         rndMsg();
     } else {
         var dM = divination[rndNum];
-        $("#div-msg").text(dM);
+        $("#div-msg").html(dM + "<span class='ht'>...</span>");
         setTimeout(function() {
-            $("#div-msg").text(dM + ".");
+            $("#div-msg").html(dM + ".<span class='ht'>..</span>");
         }, 200);
         setTimeout(function() {
-            $("#div-msg").text(dM + "..");
+            $("#div-msg").html(dM + "..<span class='ht'>.</span>");
         }, 400);
         setTimeout(function() {
-            $("#div-msg").text(dM + "...");
+            $("#div-msg").html(dM + "...");
         }, 600);
     }
 }
@@ -29,7 +31,7 @@ function rndMsg() {
 $(document).ready(function() {
     setInterval(function() {
         rndMsg();
-    }, 1200);
+    }, 800);
     //$("#name1").focus();
     $("#name1-label").click(function() {
         $("#name1").focus();
